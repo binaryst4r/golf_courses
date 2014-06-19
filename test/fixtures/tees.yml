@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  facility_id: MyString
+  tee_name: MyString
+  tee_color: MyString
+  golf_course_id: 1
+  hole1: 1
+  hole2: 1
+  hole3: 1
+
+two:
+  facility_id: MyString
+  tee_name: MyString
+  tee_color: MyString
+  golf_course_id: 1
+  hole1: 1
+  hole2: 1
+  hole3: 1

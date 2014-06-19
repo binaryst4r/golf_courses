@@ -1,0 +1,29 @@
+<%= form_for(@facility_id) do |f| %>
+  <% if @facility_id.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@facility_id.errors.count, "error") %> prohibited this facility_id from being saved:</h2>
+
+      <ul>
+      <% @facility_id.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tee_name %><br>
+    <%= f.text_field :tee_name %>
+  </div>
+  <div class="field">
+    <%= f.label :tee_color %><br>
+    <%= f.text_field :tee_color %>
+  </div>
+  <div class="field">
+    <%= f.label :golf_course_id %><br>
+    <%= f.number_field :golf_course_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<h1>Listing tees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Facility</th>
+      <th>Tee name</th>
+      <th>Tee color</th>
+      <th>Golf course</th>
+      <th>Hole1</th>
+      <th>Hole2</th>
+      <th>Hole3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tees.each do |tee| %>
+      <tr>
+        <td><%= tee.facility_id %></td>
+        <td><%= tee.tee_name %></td>
+        <td><%= tee.tee_color %></td>
+        <td><%= tee.golf_course_id %></td>
+        <td><%= tee.hole1 %></td>
+        <td><%= tee.hole2 %></td>
+        <td><%= tee.hole3 %></td>
+        <td><%= link_to 'Show', tee %></td>
+        <td><%= link_to 'Edit', edit_tee_path(tee) %></td>
+        <td><%= link_to 'Destroy', tee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tee', new_tee_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tee name:</strong>
+  <%= @facility_id.tee_name %>
+</p>
+
+<p>
+  <strong>Tee color:</strong>
+  <%= @facility_id.tee_color %>
+</p>
+
+<p>
+  <strong>Golf course:</strong>
+  <%= @facility_id.golf_course_id %>
+</p>
+
+<%= link_to 'Edit', edit_facility_id_path(@facility_id) %> |
+<%= link_to 'Back', facility_ids_path %>

@@ -1,0 +1,31 @@
+<h1>Listing facility_ids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tee name</th>
+      <th>Tee color</th>
+      <th>Golf course</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facility_ids.each do |facility_id| %>
+      <tr>
+        <td><%= facility_id.tee_name %></td>
+        <td><%= facility_id.tee_color %></td>
+        <td><%= facility_id.golf_course_id %></td>
+        <td><%= link_to 'Show', facility_id %></td>
+        <td><%= link_to 'Edit', edit_facility_id_path(facility_id) %></td>
+        <td><%= link_to 'Destroy', facility_id, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Facility', new_facility_id_path %>

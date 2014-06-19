@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @tee.facility_id %>
+</p>
+
+<p>
+  <strong>Tee name:</strong>
+  <%= @tee.tee_name %>
+</p>
+
+<p>
+  <strong>Tee color:</strong>
+  <%= @tee.tee_color %>
+</p>
+
+<p>
+  <strong>Golf course:</strong>
+  <%= @tee.golf_course_id %>
+</p>
+
+<p>
+  <strong>Hole1:</strong>
+  <%= @tee.hole1 %>
+</p>
+
+<p>
+  <strong>Hole2:</strong>
+  <%= @tee.hole2 %>
+</p>
+
+<p>
+  <strong>Hole3:</strong>
+  <%= @tee.hole3 %>
+</p>
+
+<%= link_to 'Edit', edit_tee_path(@tee) %> |
+<%= link_to 'Back', tees_path %>

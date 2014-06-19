@@ -1,0 +1,42 @@
+<h1>Listing golf_courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Facility</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @golf_courses.each do |golf_course| %>
+      <tr>
+        <td><%= golf_course.facility_id %></td>
+        <td><%= golf_course.name %></td>
+        <td><%= golf_course.address %></td>
+        <td><%= golf_course.city %></td>
+        <td><%= golf_course.state %></td>
+        <td><%= link_to 'Show', golf_course %></td>
+        <td><%= link_to 'Edit', edit_golf_course_path(golf_course) %></td>
+        <td><%= link_to 'Destroy', golf_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Golf course', new_golf_course_path %>
+
+<h2>Import Golf Courses</h2>
+
+<%= form_tag import_golf_courses_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Import' %>
+<% end %>

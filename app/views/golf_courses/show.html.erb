@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @golf_course.facility_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @golf_course.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @golf_course.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @golf_course.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @golf_course.state %>
+</p>
+
+<%= link_to 'Edit', edit_golf_course_path(@golf_course) %> |
+<%= link_to 'Back', golf_courses_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@tee) do |f| %>
+  <% if @tee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tee.errors.count, "error") %> prohibited this tee from being saved:</h2>
+
+      <ul>
+      <% @tee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :facility_id %><br>
+    <%= f.text_field :facility_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tee_name %><br>
+    <%= f.text_field :tee_name %>
+  </div>
+  <div class="field">
+    <%= f.label :tee_color %><br>
+    <%= f.text_field :tee_color %>
+  </div>
+  <div class="field">
+    <%= f.label :golf_course_id %><br>
+    <%= f.number_field :golf_course_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hole1 %><br>
+    <%= f.number_field :hole1 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole2 %><br>
+    <%= f.number_field :hole2 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole3 %><br>
+    <%= f.number_field :hole3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
